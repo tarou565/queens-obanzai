@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title or site.name }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#8a1017">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:type" content="{% if page.url and page.url.startsWith('/blog/') and page.url != '/blog/' %}article{% else %}website{% endif %}">
+<meta property="og:image" content="/assets/counter.jpg">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Restaurant",
+ "name":"{{ site.name }}",
+ "telephone":"{{ site.phone }}",
+ "servesCuisine":["おばんざい","居酒屋料理","和食"],
+ "address":{
+   "@type":"PostalAddress",
+   "streetAddress":"辻町2-33-3 サンシャイン辻町E棟B号室",
+   "addressLocality":"名古屋市北区",
+   "addressRegion":"愛知県",
+   "postalCode":"462-0032",
+   "addressCountry":"JP"
+ },
+ "sameAs":["{{ site.instagram }}"],
+ "openingHoursSpecification":[
+   {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"24:00"}
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+ <div class="wrap nav-wrap">
+  <a class="brand" href="/">QUEENS</a>
+  <nav>
+   <a href="/#about">お店について</a>
+   <a href="/#obanzai">おばんざい</a>
+   <a href="/menu/">お品書き</a>
+   <a href="/blog/">お知らせ・ブログ</a>
+   <a href="/#gallery">店内</a>
+   <a href="/#access">アクセス</a>
+   <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>
+  </nav>
+  <a class="tel-small" href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
+ </div>
+</header>
+{{ content | safe }}
+<footer><div class="wrap footer">{{ site.name }} <span>名古屋市北区辻町</span></div></footer>
+<a class="floating" href="tel:{{ site.phoneHref }}">☎ 電話する</a>
+</body></html>

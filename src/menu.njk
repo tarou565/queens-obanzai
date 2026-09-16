@@ -1,0 +1,9 @@
+---
+layout: base.njk
+permalink: /menu/index.html
+title: 料理・ドリンク｜おばんざい居酒屋 QUEENS 名古屋市北区辻町
+description: QUEENSは京都出身の料理人による手作り和食・おばんざいを300円台から提供。定番約20品と日替わり3〜5品、おかみセット1,500円、ビール・日本酒・焼酎など。
+---
+<main class="inner-page"><section class="page-hero"><div class="wrap"><p class="kicker gold">FOOD & DRINK</p><h1>料理・ドリンク</h1><p>京都の味を気軽に。一品300円台から。</p></div></section>
+<section class="section paper"><div class="wrap"><div class="menu-intro"><h2>料理は、その日の楽しみ。</h2><p>定番の一品料理を約20種類、さらにその日の仕入れや季節に合わせた料理を3〜5種類ほどご用意しています。料理は300円・400円・500円台から。固定の料理一覧は設けず、その日のおすすめは店頭・Instagramでご案内します。</p><div class="okami-card"><strong>おかみセット　1,500円</strong><span>ワンドリンク ＋ おかみおまかせ料理3品</span></div><a class="btn insta" href="{{ site.instagram }}" target="_blank" rel="noopener">本日の料理をInstagramで見る</a></div></div></section>
+<section class="section dark"><div class="wrap"><div class="split"><div><p class="kicker gold">DRINK MENU</p><h2>お酒・ソフトドリンク</h2><p class="muted-light">おばんざいに合わせて、ビール、ウイスキー、日本酒、焼酎・サワーをご用意しています。</p></div><img class="rounded" src="/assets/drinks.jpg" alt="QUEENSのドリンク"></div><div class="drink-groups">{% for group in [{key:'beer',label:'ビール'},{key:'whisky',label:'ウイスキー'},{key:'sake',label:'日本酒'},{key:'shochu',label:'焼酎・サワー'},{key:'soft',label:'ソフトドリンク'}] %}<section><h3>{{ group.label }}</h3>{% for item in menu[group.key] %}<div class="menu-row"><strong>{{ item.name }}</strong><span>{{ item.price }}</span></div>{% endfor %}</section>{% endfor %}</div><p class="muted-light small-note">※内容・価格は変更になる場合があります。最新情報は店頭でご確認ください。</p></div></section></main>
