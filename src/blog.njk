@@ -8,6 +8,6 @@ description: QUEENSの本日のおばんざい、新メニュー、営業日、�
 <section class="page-hero"><div class="wrap"><p class="kicker gold">NEWS & BLOG</p><h1>お知らせ・ブログ</h1><p>本日のおばんざい、新メニュー、営業日、イベント情報などを更新します。</p></div></section>
 <section class="section paper"><div class="wrap post-list">
 {% for post in collections.posts %}
-<article class="post-list-item"><p class="post-date">{{ post.date | date: "%Y.%m.%d" }}</p><h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2><p>{{ post.data.excerpt }}</p><a href="{{ post.url }}">続きを読む →</a></article>
+<article class="post-list-item"><h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2></article>
 {% endfor %}
 </div></section></main>
