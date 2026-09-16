@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "queens-obanzai",
+  "compatibility_date": "2026-09-16",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./_site"
+  }
+}
