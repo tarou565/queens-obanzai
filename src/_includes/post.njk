@@ -1,7 +1,18 @@
 ---
 layout: base.njk
 ---
-<main class="inner-page"><article class="post-page">
-<section class="page-hero"><div class="wrap"><p class="kicker gold">QUEENS BLOG</p><h1>{{ title }}</h1><p>{{ page.date | date: "%Y.%m.%d" }}</p></div></section>
-<section class="section paper"><div class="wrap prose">{{ content | safe }}<p class="back"><a href="/blog/">← お知らせ・ブログ一覧へ</a></p></div></section>
-</article></main>
+
+<main class="inner-page">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="kicker gold">NEWS & BLOG</p>
+      <h1>{{ title }}</h1>
+    </div>
+  </section>
+
+  <section class="section paper">
+    <div class="wrap article-body">
+      {{ content | safe }}
+    </div>
+  </section>
+</main>
