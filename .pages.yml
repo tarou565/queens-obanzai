@@ -1,0 +1,19 @@
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: posts
+    label: お知らせ・ブログ
+    type: collection
+    path: src/posts
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+      - name: excerpt
+        label: 一覧用の短い説明
+        type: text
+      - name: body
+        label: 本文
+        type: rich-text
